@@ -1,9 +1,15 @@
 // Widescreens
 @include mediaXl {
+  .games {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 // Desktops & Laptops
 @include mediaLg {
+  .games {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 // Tablets & Small Laptops
@@ -56,11 +62,19 @@
 
     grid-auto-columns: 1fr;
   }
+
+  .games {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 // Smartphones
 @include mediaSm {
   main#home h2 {
     margin-top: 10vh;
+  }
+
+  .games {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
