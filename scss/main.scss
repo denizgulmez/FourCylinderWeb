@@ -49,6 +49,10 @@ header {
   font-weight: 100;
 }
 
+.text-tetriary {
+  color: $secondary-color;
+}
+
 main {
   padding: 4rem 5rem;
   //height: 100%;
@@ -126,6 +130,33 @@ main {
       opacity: 0.5;
       border-color: $tetriary-color;
       @include easeOut;
+    }
+  }
+}
+
+// Contact Page
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 2rem;
+    border: 3px $tetriary-color solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      border: 3px $tetriary-color solid;
+      color: $primary-color;
+      span {
+        color: $tetriary-color;
+      }
     }
   }
 }
