@@ -91,6 +91,37 @@
 .nav-item:nth-child(5) {
   transition-delay: 0.5s; }
 
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("../img/4_cylinder_logo_very_small.png");
+      width: 275px;
+      height: 150px; } }
+
+@media screen and (max-width: 500px) {
+  main#home h2 {
+    margin-top: 10vh; } }
+
 * {
   box-sizing: border-box; }
 
@@ -124,8 +155,8 @@ h3 {
   h2.lg-heading,
   h3.lg-heading {
     font-size: 5rem;
-    margin-bottom: 3rem;
-    padding: 0.2rem 1rem; }
+    margin-bottom: 1rem;
+    padding: 2.5rem 0rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -148,7 +179,7 @@ main {
   padding: 4rem;
   height: 100%; }
   main .icons {
-    margin-top: 1rem; }
+    margin-top: 2rem; }
     main .icons a {
       padding: 1rem; }
       main .icons a:hover {
@@ -156,5 +187,5 @@ main {
         transition: all 0.25s ease-out; }
   main#home {
     overflow: hidden; }
-    main#home h2 {
+    main#home .sm-heading {
       margin-top: 20vh; }
