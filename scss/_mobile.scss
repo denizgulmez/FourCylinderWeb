@@ -1,30 +1,14 @@
 // Widescreens
 @include mediaXl {
-  .games {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 
 // Desktops & Laptops
 @include mediaLg {
-  .games {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 // Tablets & Small Laptops
 @include mediaMd {
-  main {
-    align-items: center;
-    text-align: center;
-
-    .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem;
-    }
-  }
-
-  ul.menu-nav,
+  /* ul.menu-nav,
   div.menu-branding {
     float: none;
     width: 100%;
@@ -38,7 +22,7 @@
   .menu-nav {
     height: 75vh;
     transform: translate3d(-100%, 0, 0);
-    font-size: 24px;
+    //font-size: 10px;
   }
 
   .menu-branding {
@@ -50,31 +34,9 @@
       width: 275px;
       height: 150px;
     }
-  }
-
-  .about-info {
-    grid-template-areas:
-      "about-logo"
-      "bio"
-      "bioBox1"
-      "bioBox2"
-      "bioBox3";
-
-    grid-auto-columns: 1fr;
-  }
-
-  .games {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  } */
 }
 
 // Smartphones
 @include mediaSm {
-  main#home h2 {
-    margin-top: 10vh;
-  }
-
-  .games {
-    grid-template-columns: repeat(1, 1fr);
-  }
 }

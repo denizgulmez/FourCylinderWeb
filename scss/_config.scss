@@ -1,15 +1,21 @@
-$primary-color: #fff;
-$secondary-color: #ff5400;
-$tetriary-color: #1a1a1a;
+$primary-color: #f4f4f4;
+$secondary-color: #1a1a1a;
+
+$color-1: #ff5400;
+$color-2: #ff9e0f;
+$color-3: #0ab1a9;
+$color-4: #02144c;
+$color-5: #cd0d1c;
+
 $show-home-image: true;
-$home-image: url(../img/background_white.jpg);
-$background-opacity: 0.85;
+$home-image: url(../img/webpage_background.png);
+$background-opacity: 0.75;
 
 @mixin easeOut {
   transition: all 0.25s ease-out;
 }
 
-@mixin background {
+/* @mixin background {
   @if $show-home-image {
     &#bg-img {
       background: $home-image;
@@ -28,16 +34,7 @@ $background-opacity: 0.85;
       }
     }
   }
-}
-
-// Set Text Color
-@function set-text-color($color) {
-  @if (lightness($color) > 40) {
-    @return #000;
-  } @else {
-    @return #fff;
-  }
-}
+} */
 
 // Media Query Mixins
 @mixin mediaSm {

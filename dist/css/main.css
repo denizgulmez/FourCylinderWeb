@@ -1,3 +1,23 @@
+/* @mixin background {
+  @if $show-home-image {
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgba($primary-color, $background-opacity);
+      }
+    }
+  }
+} */
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -34,28 +54,34 @@
     align-items: center;
     justify-content: center;
     float: left;
-    width: 50%;
+    width: 100%;
     height: 100vh;
-    overflow: hidden; }
+    overflow: hidden;
+    float: none;
+    min-height: 0; }
   .menu-nav {
     margin: 0;
     padding: 0;
     background: #ff5400;
     list-style: none;
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(100%, 0, 0);
+    height: 75vh;
+    font-size: 24px;
     transition: all 0.25s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #fff;
-    transform: translate3d(0, 100%, 0);
+    background: #f4f4f4;
+    transform: translate3d(-100%, 0, 0);
+    height: 25vh;
     transition: all 0.25s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
-    .menu-branding .portrait {
-      width: 400px;
-      height: 218px;
-      background: url("../img/4_cylinder_logo_small.png"); }
+    .menu-branding .logo {
+      /* background: url("../img/4_cylinder_logo_very_small.png");
+      height: 150px;
+      width: 275px; */
+      height: 100px; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.25s ease-out; }
@@ -66,11 +92,10 @@
   .menu .nav-link {
     display: inline-block;
     position: relative;
-    font-size: 30px;
     text-transform: uppercase;
     padding: 0.75rem 0;
     font-weight: 400;
-    color: #fff;
+    color: #f4f4f4;
     text-decoration: none;
     transition: all 0.25s ease-out; }
     .menu .nav-link:hover {
@@ -95,193 +120,42 @@
   box-sizing: border-box; }
 
 body {
-  background: #fff;
+  background: #f4f4f4;
   color: #1a1a1a;
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5; }
-  body#bg-img {
-    background: url(../img/background_white.jpg);
-    background-attachment: fixed;
-    background-size: cover; }
-    body#bg-img:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: rgba(255, 255, 255, 0.85); }
-
-h1,
-h2,
-h3 {
-  margin: 0;
-  font-weight: 400; }
-  h1.lg-heading,
-  h2.lg-heading,
-  h3.lg-heading {
-    font-size: 5rem;
-    margin-bottom: 1rem;
-    padding: 2rem; }
-  h1.sm-heading,
-  h2.sm-heading,
-  h3.sm-heading {
-    font-size: 2rem;
-    background: rgba(255, 255, 255, 0); }
-
-a {
-  color: #1a1a1a;
-  text-decoration: none; }
+  font-family: "Segoe UI", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
 
 header {
   position: fixed;
   z-index: 2;
   width: 100%; }
 
-.text-secondary {
-  font-weight: 100; }
-
-.text-tetriary {
-  color: #ff5400; }
-
-main {
-  padding: 4rem 5rem;
-  min-height: calc(100vh - 60px); }
-  main .icons {
-    margin-top: 2rem; }
-    main .icons a {
-      padding: 1rem; }
-      main .icons a:hover {
-        color: #ff5400;
-        transition: all 0.25s ease-out; }
-  main#home {
-    overflow: hidden; }
-    main#home .sm-heading {
-      margin-top: 20vh; }
-
-.about-info {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-areas: "about-logo bio bio" "bioBox1 bioBox2 bioBox3";
-  grid-template-columns: repeat(3, 1fr); }
-  .about-info .bio-image {
-    grid-area: about-logo;
-    margin: auto; }
-  .about-info .bio {
-    grid-area: bio; }
-  .about-info .bioBox-1 {
-    grid-area: bioBox1; }
-  .about-info .bioBox-2 {
-    grid-area: bioBox2; }
-  .about-info .bioBox-3 {
-    grid-area: bioBox3; }
-  .about-info .bioBox {
-    color: #fff;
-    background: #ff651a;
-    padding: 0.5rem;
-    border-bottom: #1a1a1a 5px solid; }
-
-.games {
-  display: grid;
-  grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr); }
-  .games img {
-    width: 100%;
-    border: 3px #e64c00 solid; }
-    .games img:hover {
-      opacity: 0.5;
-      border-color: #1a1a1a;
-      transition: all 0.25s ease-out; }
-
-.boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem; }
-  .boxes div {
-    font-size: 2rem;
-    border: 3px #1a1a1a solid;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
-    transition: all 0.25s ease-out; }
-    .boxes div:hover {
-      padding: 0.5rem 1.5rem;
-      background: #ff5400;
-      border: 3px #1a1a1a solid;
-      color: #fff; }
-      .boxes div:hover span {
-        color: #1a1a1a; }
-
-.btn, .btn-dark, .btn-light {
-  display: block;
-  padding: 0.5rem 1rem;
-  border: 0;
-  margin-bottom: 0.3rem; }
-  .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #ff5400;
-    color: #fff; }
-
-.btn-dark {
-  background: black;
-  color: #fff; }
-
-.btn-light {
-  background: #cdcdcd;
-  color: #1a1a1a; }
-
-#main-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #e6e6e6;
-  color: #1a1a1a;
-  height: 60px; }
-
-@media screen and (min-width: 1171px) {
-  .games {
-    grid-template-columns: repeat(4, 1fr); } }
-
-@media screen and (min-width: 769px) and (max-width: 1170px) {
-  .games {
-    grid-template-columns: repeat(3, 1fr); } }
-
 @media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  ul.menu-nav,
+  /* ul.menu-nav,
   div.menu-branding {
     float: none;
     width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show,
-    div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
+    min-height: 0;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
   .menu-nav {
     height: 75vh;
     transform: translate3d(-100%, 0, 0);
-    font-size: 24px; }
+    //font-size: 10px;
+  }
+
   .menu-branding {
     height: 25vh;
-    transform: translate3d(100%, 0, 0); }
-    .menu-branding .portrait {
+    transform: translate3d(100%, 0, 0);
+
+    .portrait {
       background: url("../img/4_cylinder_logo_very_small.png");
       width: 275px;
-      height: 150px; }
-  .about-info {
-    grid-template-areas: "about-logo" "bio" "bioBox1" "bioBox2" "bioBox3";
-    grid-auto-columns: 1fr; }
-  .games {
-    grid-template-columns: repeat(2, 1fr); } }
-
-@media screen and (max-width: 500px) {
-  main#home h2 {
-    margin-top: 10vh; }
-  .games {
-    grid-template-columns: repeat(1, 1fr); } }
+      height: 150px;
+    }
+  } */ }
