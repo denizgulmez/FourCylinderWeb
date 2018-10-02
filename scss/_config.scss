@@ -15,6 +15,20 @@ $background-opacity: 0.75;
   transition: all 0.25s ease-out;
 }
 
+@mixin btnStyle {
+  background-color: $color-1;
+  border: none;
+  border-radius: 8px;
+  color: $primary-color;
+  padding: 15px 15px;
+  margin-bottom: 10vh;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+}
+
 /* @mixin background {
   @if $show-home-image {
     &#bg-img {

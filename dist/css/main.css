@@ -21,8 +21,8 @@
 .menu-btn {
   position: absolute;
   z-index: 3;
-  right: 35px;
-  top: 35px;
+  right: 20px;
+  top: 18px;
   cursor: pointer;
   transition: all 0.25s ease-out; }
   .menu-btn .btn-line {
@@ -39,6 +39,17 @@
       opacity: 0; }
     .menu-btn.close .btn-line:nth-child(3) {
       transform: rotate(-45deg) translate(7px, -6px); }
+
+.menu-banner {
+  margin-top: 18px; }
+  .menu-banner .banner-text {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-right: 5vh; }
+    .menu-banner .banner-text .banner-secondary {
+      font-weight: 500; }
 
 .menu {
   position: fixed;
@@ -65,7 +76,7 @@
     background: #ff5400;
     list-style: none;
     transform: translate3d(100%, 0, 0);
-    height: 75vh;
+    height: 60vh;
     font-size: 24px;
     transition: all 0.25s ease-out; }
     .menu-nav.show {
@@ -73,7 +84,7 @@
   .menu-branding {
     background: #f4f4f4;
     transform: translate3d(-100%, 0, 0);
-    height: 25vh;
+    height: 40vh;
     transition: all 0.25s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
@@ -93,8 +104,8 @@
     display: inline-block;
     position: relative;
     text-transform: uppercase;
-    padding: 0.75rem 0;
-    font-weight: 400;
+    padding: 1rem 0;
+    font-weight: 500;
     color: #f4f4f4;
     text-decoration: none;
     transition: all 0.25s ease-out; }
@@ -116,9 +127,6 @@
 .nav-item:nth-child(5) {
   transition-delay: 0.5s; }
 
-* {
-  box-sizing: border-box; }
-
 body {
   background: #f4f4f4;
   color: #1a1a1a;
@@ -129,33 +137,67 @@ body {
 header {
   position: fixed;
   z-index: 2;
-  width: 100%; }
+  width: 100%;
+  background-color: #ff5400;
+  height: 50px; }
 
-@media screen and (max-width: 768px) {
-  /* ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0;
+main {
+  align-items: center;
+  text-align: center; }
+  main section {
+    padding: 5vh 5vh; }
+  main h1 {
+    font-size: 1.8rem; }
+    main h1 .weak {
+      font-weight: 400; }
+  main h2 {
+    font-weight: 500;
+    font-size: 1.2rem; }
+    main h2.bold {
+      font-weight: 700; }
+  main h3,
+  main h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0 2vh; }
+  main img {
+    width: 30vh;
+    max-width: 560px;
+    padding-top: 5vh;
+    padding-bottom: 1vh; }
+  main button {
+    background-color: #ff5400;
+    border: none;
+    border-radius: 8px;
+    color: #f4f4f4;
+    padding: 15px 15px;
+    margin-bottom: 10vh;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 2vh; }
+  main .bg-dark {
+    background-color: #1a1a1a;
+    color: #f4f4f4; }
+  main .bg-light {
+    background-color: #f4f4f4;
+    color: #1a1a1a; }
+  main .news {
+    padding: 2vh; }
+    main .news .post {
+      border-style: solid;
+      border-color: #ff5400; }
+  main .icons i {
+    padding: 2vh; }
 
-    &.show {
-      transform: translate3d(0, 0, 0);
-    }
-  }
-
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0);
-    //font-size: 10px;
-  }
-
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0);
-
-    .portrait {
-      background: url("../img/4_cylinder_logo_very_small.png");
-      width: 275px;
-      height: 150px;
-    }
-  } */ }
+footer {
+  background-color: #1a1a1a;
+  color: #f4f4f4;
+  text-align: center; }
+  footer .txt-footer {
+    margin: 0;
+    padding: 15px;
+    font-size: 0.75rem;
+    font-weight: 400; }
