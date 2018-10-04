@@ -1,5 +1,6 @@
 @import "config";
 @import "menu";
+@import "blog";
 
 * {
   box-sizing: border-box;
@@ -69,7 +70,7 @@ main {
     font-size: 1.2rem;
 
     &.bold {
-      font-weight: 800;
+      font-weight: 700;
     }
   }
 
@@ -110,21 +111,12 @@ main {
     background-color: $primary-color;
   }
 
-  .news {
-    padding: 2vh;
-
-    .post {
-      border-style: solid;
-      border-color: lighten($secondary-color, 50);
-      border-radius: 10px;
-    }
-  }
-
   .icons {
     i {
       @include iconStyle;
       margin: 20px 10px;
       color: $primary-color;
+      border-color: $primary-color;
     }
 
     .fa-twitter {

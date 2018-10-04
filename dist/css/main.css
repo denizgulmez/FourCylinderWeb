@@ -127,6 +127,32 @@
 .nav-item:nth-child(5) {
   transition-delay: 0.5s; }
 
+#blog h1,
+#blog h2,
+#blog h3,
+#blog h4,
+#blog p {
+  max-width: 540px; }
+
+#blog .blog-post {
+  padding: 50px; }
+  #blog .blog-post .post-date {
+    color: gray; }
+  #blog .blog-post .post-header {
+    padding-bottom: 20px; }
+  #blog .blog-post a {
+    display: inline-block;
+    padding-top: 20px;
+    text-decoration: none;
+    color: #ff5400;
+    font-weight: 500; }
+  #blog .blog-post .post-line {
+    display: inline-block;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 520px;
+    border-top: 1px solid gray; }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -177,7 +203,7 @@ main {
     font-weight: 500;
     font-size: 1.2rem; }
     main h2.bold {
-      font-weight: 800; }
+      font-weight: 700; }
   main h3,
   main h4 {
     font-size: 1rem;
@@ -213,21 +239,16 @@ main {
     padding: 20px;
     margin-top: 25px;
     background-color: #f4f4f4; }
-  main .news {
-    padding: 2vh; }
-    main .news .post {
-      border-style: solid;
-      border-color: #9a9a9a;
-      border-radius: 10px; }
   main .icons i {
-    width: 75px;
-    height: 75px;
-    line-height: 75px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
     border-radius: 100%;
     text-align: center;
     vertical-align: middle;
     margin: 20px 10px;
-    color: #f4f4f4; }
+    color: #f4f4f4;
+    border-color: #f4f4f4; }
   main .icons .fa-twitter {
     background-color: #0ab1a9; }
   main .icons .fa-instagram {
