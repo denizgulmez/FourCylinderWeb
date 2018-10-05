@@ -4,27 +4,10 @@
   h3,
   h4,
   p {
-    max-width: 540px;
   }
 
   .blog-post {
     padding: 50px;
-
-    .post-date {
-      color: lighten($secondary-color, 40);
-    }
-
-    .post-header {
-      padding-bottom: 20px;
-    }
-
-    a {
-      display: inline-block;
-      padding-top: 20px;
-      text-decoration: none;
-      color: $color-1;
-      font-weight: 500;
-    }
 
     .post-line {
       display: inline-block;
@@ -33,5 +16,34 @@
       max-width: 520px;
       border-top: 1px solid lighten($secondary-color, 40);
     }
+  }
+
+  .content-post {
+    max-width: 540px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .post-date {
+    color: lighten($secondary-color, 40);
+  }
+
+  .post-header {
+    padding-bottom: 20px;
+  }
+
+  a {
+    display: inline-block;
+
+    text-align: center;
+    padding-top: 20px;
+    text-decoration: none;
+    color: $color-3;
+    font-weight: 500;
+  }
+
+  .post-footer {
+    width: 100%;
   }
 }

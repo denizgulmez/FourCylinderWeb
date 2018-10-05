@@ -127,31 +127,37 @@
 .nav-item:nth-child(5) {
   transition-delay: 0.5s; }
 
-#blog h1,
-#blog h2,
-#blog h3,
-#blog h4,
-#blog p {
-  max-width: 540px; }
-
 #blog .blog-post {
   padding: 50px; }
-  #blog .blog-post .post-date {
-    color: gray; }
-  #blog .blog-post .post-header {
-    padding-bottom: 20px; }
-  #blog .blog-post a {
-    display: inline-block;
-    padding-top: 20px;
-    text-decoration: none;
-    color: #ff5400;
-    font-weight: 500; }
   #blog .blog-post .post-line {
     display: inline-block;
     margin-top: 20px;
     width: 80%;
     max-width: 520px;
     border-top: 1px solid gray; }
+
+#blog .content-post {
+  max-width: 540px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto; }
+
+#blog .post-date {
+  color: gray; }
+
+#blog .post-header {
+  padding-bottom: 20px; }
+
+#blog a {
+  display: inline-block;
+  text-align: center;
+  padding-top: 20px;
+  text-decoration: none;
+  color: #0ab1a9;
+  font-weight: 500; }
+
+#blog .post-footer {
+  width: 100%; }
 
 * {
   box-sizing: border-box;
@@ -189,7 +195,8 @@ main {
   main h2,
   main h3,
   main h4,
-  main p {
+  main p,
+  main a {
     max-width: 720px;
     margin-left: auto;
     margin-right: auto;
@@ -210,7 +217,9 @@ main {
     font-weight: 500;
     padding: 0 2vh; }
   main p {
-    font-weight: 500; }
+    font-weight: 400;
+    text-align: left;
+    max-width: 520px; }
     main p .biggie {
       font-size: 2rem;
       font-weight: 700;
@@ -240,15 +249,15 @@ main {
     margin-top: 25px;
     background-color: #f4f4f4; }
   main .icons i {
-    width: 60px;
-    height: 60px;
+    width: 64px;
+    height: 64px;
     line-height: 60px;
     border-radius: 100%;
     text-align: center;
     vertical-align: middle;
     margin: 20px 10px;
     color: #f4f4f4;
-    border-color: #f4f4f4; }
+    border: 2px solid #f4f4f4; }
   main .icons .fa-twitter {
     background-color: #0ab1a9; }
   main .icons .fa-instagram {
@@ -256,7 +265,7 @@ main {
   main .icons .fa-facebook-f {
     background-color: #02144c; }
   main .email {
-    padding: 5vh 0; }
+    padding-top: 25px; }
 
 footer {
   position: relative;
