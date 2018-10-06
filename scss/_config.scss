@@ -16,15 +16,16 @@ $background-opacity: 0.75;
 }
 
 @mixin btnStyle {
+  cursor: pointer;
   background-color: $color-1;
   border: none;
   border-radius: 8px;
   color: $primary-color;
-  padding: 15px 15px;
+  padding: 20px 15px 40px 15px;
   text-align: center;
-  text-decoration: none;
   font-size: 18px;
   font-weight: 500;
+  width: auto;
 }
 
 @mixin inputForm {
@@ -67,13 +68,19 @@ $background-opacity: 0.75;
 } */
 
 // Media Query Mixins
+@mixin mediaXs {
+  @media screen and (max-width: 340px) {
+    @content;
+  }
+}
+
 @mixin mediaSm {
   @media screen and (max-width: 500px) {
     @content;
   }
 }
 @mixin mediaMd {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) and (min-width: 501px) {
     @content;
   }
 }

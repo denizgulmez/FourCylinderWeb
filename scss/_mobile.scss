@@ -8,8 +8,62 @@
 
 // Tablets & Small Laptops
 @include mediaMd {
+  #home {
+    section {
+      padding-left: 20%;
+      padding-right: 20%;
+    }
+  }
+
+  #blog,
+  #manifesto,
+  #contact {
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    a {
+      padding-left: 20%;
+      padding-right: 20%;
+    }
+  }
+
+  .menu {
+    &-nav {
+      font-size: 36px;
+    }
+
+    &-branding {
+      .logo {
+        height: 200px;
+      }
+    }
+  }
 }
 
 // Smartphones
 @include mediaSm {
+}
+
+// The Iphone 5 Abomination
+@include mediaXs {
+  main {
+    section {
+      padding: 5vh 1vh;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    a {
+      padding-left: 3vh;
+      padding-right: 3vh;
+    }
+
+    h1 {
+    }
+  }
 }

@@ -89,9 +89,6 @@
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .logo {
-      /* background: url("../img/4_cylinder_logo_very_small.png");
-      height: 150px;
-      width: 275px; */
       height: 100px; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
@@ -137,7 +134,6 @@
     border-top: 1px solid gray; }
 
 #blog .content-post {
-  max-width: 540px;
   text-align: left;
   margin-left: auto;
   margin-right: auto; }
@@ -158,6 +154,15 @@
 
 #blog .post-footer {
   width: 100%; }
+
+#contact .heading {
+  padding-bottom: 5vh; }
+
+#contact .email .email-adress {
+  border: 2px solid #ff5400;
+  border-radius: 10px; }
+  #contact .email .email-adress h2 {
+    padding: 10px; }
 
 * {
   box-sizing: border-box;
@@ -197,7 +202,6 @@ main {
   main h4,
   main p,
   main a {
-    max-width: 720px;
     margin-left: auto;
     margin-right: auto;
     padding: 1vh; }
@@ -218,8 +222,7 @@ main {
     padding: 0 2vh; }
   main p {
     font-weight: 400;
-    text-align: left;
-    max-width: 520px; }
+    text-align: left; }
     main p .biggie {
       font-size: 2rem;
       font-weight: 700;
@@ -227,18 +230,18 @@ main {
   main img {
     width: 30vh;
     max-width: 560px;
-    padding: 15px 0; }
-  main button {
+    padding: 5vh 0 1vh 0; }
+  main .button {
+    cursor: pointer;
     background-color: #ff5400;
     border: none;
     border-radius: 8px;
     color: #f4f4f4;
-    padding: 15px 15px;
+    padding: 20px 15px 40px 15px;
     text-align: center;
-    text-decoration: none;
     font-size: 18px;
     font-weight: 500;
-    margin-top: 2vh; }
+    width: auto; }
   main input {
     width: 80%;
     max-width: 420px;
@@ -279,3 +282,44 @@ footer {
     padding: 15px;
     font-size: 0.75rem;
     font-weight: 400; }
+
+@media screen and (max-width: 768px) and (min-width: 501px) {
+  #home section {
+    padding-left: 20%;
+    padding-right: 20%; }
+  #blog h1,
+  #blog h2,
+  #blog h3,
+  #blog h4,
+  #blog p,
+  #blog a,
+  #manifesto h1,
+  #manifesto h2,
+  #manifesto h3,
+  #manifesto h4,
+  #manifesto p,
+  #manifesto a,
+  #contact h1,
+  #contact h2,
+  #contact h3,
+  #contact h4,
+  #contact p,
+  #contact a {
+    padding-left: 20%;
+    padding-right: 20%; }
+  .menu-nav {
+    font-size: 36px; }
+  .menu-branding .logo {
+    height: 200px; } }
+
+@media screen and (max-width: 340px) {
+  main section {
+    padding: 5vh 1vh; }
+  main h1,
+  main h2,
+  main h3,
+  main h4,
+  main p,
+  main a {
+    padding-left: 3vh;
+    padding-right: 3vh; } }

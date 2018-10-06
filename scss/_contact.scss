@@ -1,0 +1,16 @@
+#contact {
+  .heading {
+    padding-bottom: 5vh;
+  }
+
+  .email {
+    .email-adress {
+      border: 2px solid $color-1;
+      border-radius: 10px;
+
+      h2 {
+        padding: 10px;
+      }
+    }
+  }
+}

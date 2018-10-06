@@ -1,6 +1,7 @@
 @import "config";
 @import "menu";
 @import "blog";
+@import "contact";
 
 * {
   box-sizing: border-box;
@@ -51,7 +52,6 @@ main {
   h4,
   p,
   a {
-    max-width: 720px;
     margin-left: auto;
     margin-right: auto;
     padding: 1vh;
@@ -85,7 +85,6 @@ main {
   p {
     font-weight: 400;
     text-align: left;
-    max-width: 520px;
 
     .biggie {
       font-size: 2rem;
@@ -97,12 +96,11 @@ main {
   img {
     width: 30vh;
     max-width: 560px;
-    padding: 15px 0;
+    padding: 5vh 0 1vh 0;
   }
 
-  button {
+  .button {
     @include btnStyle;
-    margin-top: 2vh;
   }
 
   input {
