@@ -1,13 +1,192 @@
 // Widescreens
 @include mediaXl {
+  main &.game {
+    display: grid;
+    grid-template-columns: repeat(1fr, 5);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 20px 50px;
+
+    h1 {
+      grid-column: 1/6;
+    }
+
+    .game-logo {
+      grid-column: 1/3;
+    }
+
+    .game-overview {
+      grid-column: 3/6;
+      padding: 30px 20px;
+    }
+  }
+
+  #contact {
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    grid-gap: 20px 50px;
+
+    .social-media {
+      grid-column: 1/3;
+    }
+
+    .newsletter {
+      grid-column: 1/2;
+    }
+
+    .email {
+      grid-column: 2/3;
+    }
+  }
 }
 
 // Desktops & Laptops
 @include mediaLg {
+  .menu-btn,
+  .menu-banner &.banner-text {
+    display: none;
+  }
+
+  main {
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    a {
+      max-width: 1080px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1vh 100px;
+    }
+
+    h1 {
+      font-size: 4rem;
+      line-height: 1;
+
+      .weak {
+        font-weight: 400;
+      }
+    }
+
+    h2 {
+      font-weight: 500;
+      font-size: 2rem;
+
+      &.bold {
+        font-weight: 700;
+      }
+    }
+
+    h3,
+    h4 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding: 0 2vh;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-align: left;
+
+      .biggie {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1;
+      }
+    }
+
+    a {
+      font-size: 2rem;
+    }
+
+    img {
+      height: 400px;
+      max-width: 720px;
+      padding: 50px 0 30px 0;
+    }
+
+    .contact {
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      a {
+        max-width: 1080px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1vh;
+      }
+    }
+
+    .icons {
+      i {
+        width: 124px;
+        height: 124px;
+        line-height: 120px;
+        margin: 50px 50px;
+        color: $primary-color;
+        border: 2px solid $primary-color;
+      }
+
+      .fab {
+        font-size: 75px;
+      }
+    }
+  }
 }
 
 // Tablets & Small Laptops
 @include mediaMd {
+  .navbar {
+    display: none;
+  }
+
+  main {
+    h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    h3,
+    h4 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding: 0 2vh;
+    }
+
+    p,
+    a {
+      font-size: 1.5rem;
+    }
+
+    .button {
+      padding: 30px 25px 50px 25px;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .icons {
+      i {
+        width: 96px;
+        height: 96px;
+        line-height: 92px;
+        margin: 30px 20px;
+        color: $primary-color;
+        border: 2px solid $primary-color;
+      }
+
+      .fab {
+        font-size: 50px;
+      }
+    }
+  }
+
   #home {
     section {
       padding-left: 20%;
@@ -44,6 +223,9 @@
 
 // Smartphones
 @include mediaSm {
+  .navbar {
+    display: none;
+  }
 }
 
 // The Iphone 5 Abomination
@@ -62,8 +244,56 @@
       padding-left: 3vh;
       padding-right: 3vh;
     }
+  }
+}
 
-    h1 {
+// Landscape for smartphones
+@include mediaLandscape {
+  .navbar {
+    display: none;
+  }
+
+  .menu-btn,
+  .menu-banner &.banner-text {
+    display: block;
+  }
+
+  .menu {
+    &-nav,
+    &-branding {
+      width: 50%;
+      float: left;
+    }
+
+    &-nav {
+      transform: translate3d(0, 100%, 0);
+      height: 100vh;
+      font-size: 24px;
+    }
+
+    &-branding {
+      transform: translate3d(0, -100%, 0);
+      height: 100vh;
+
+      .logo {
+        height: 100px;
+      }
+    }
+  }
+
+  main {
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    a {
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1vh;
+      padding-left: 100px;
+      padding-right: 100px;
     }
   }
 }

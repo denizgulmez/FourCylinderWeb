@@ -41,15 +41,50 @@
       transform: rotate(-45deg) translate(7px, -6px); }
 
 .menu-banner {
-  margin-top: 18px; }
+  height: 55px;
+  background-color: #ff5400; }
   .menu-banner .banner-text {
     font-size: 14px;
     font-weight: 800;
     letter-spacing: 2px;
     text-align: center;
-    padding-right: 5vh; }
+    padding-right: 5vh;
+    padding-top: 18px; }
     .menu-banner .banner-text .banner-secondary {
       font-weight: 500; }
+
+.navbar {
+  z-index: 2;
+  margin-top: 0;
+  padding: 0;
+  background-color: #ff5400;
+  /* Change the link color to #111 (black) on hover */ }
+  .navbar .navbar-logo img {
+    margin: 0;
+    float: left;
+    height: 80px;
+    padding: 5px 25px 5px 10px;
+    background-color: #ff5400;
+    border-radius: 0 0 50px 0; }
+  .navbar ul {
+    list-style-type: none;
+    overflow: hidden;
+    padding-left: 10%; }
+    .navbar ul .current a {
+      color: #1a1a1a; }
+  .navbar li {
+    float: left; }
+  .navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500; }
+  .navbar li a:hover {
+    background-color: #993200;
+    border-radius: 0 0 10px 10px; }
 
 .menu {
   position: fixed;
@@ -64,7 +99,6 @@
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    float: left;
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -153,10 +187,13 @@
   font-weight: 500; }
 
 #blog .post-footer {
-  width: 100%; }
+  max-width: 720px;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto; }
 
-#contact .heading {
-  padding-bottom: 5vh; }
+#contact h1 {
+  padding-bottom: 50px; }
 
 #contact .email .email-adress {
   border: 2px solid #ff5400;
@@ -186,14 +223,15 @@ body {
 header {
   position: fixed;
   z-index: 2;
-  width: 100%;
-  background-color: #ff5400;
-  height: 50px; }
+  width: 100%; }
 
 main {
   align-items: center;
-  text-align: center;
-  padding-top: 8vh; }
+  text-align: center; }
+  main .top-section {
+    padding-top: 55px; }
+    main .top-section .top {
+      padding-top: 30px; }
   main section {
     padding: 5vh 5vh; }
   main h1,
@@ -202,6 +240,7 @@ main {
   main h4,
   main p,
   main a {
+    max-width: 720px;
     margin-left: auto;
     margin-right: auto;
     padding: 1vh; }
@@ -228,9 +267,9 @@ main {
       font-weight: 700;
       line-height: 1; }
   main img {
-    width: 30vh;
+    height: 200px;
     max-width: 560px;
-    padding: 5vh 0 1vh 0; }
+    padding: 20px 0 10px 0; }
   main .button {
     cursor: pointer;
     background-color: #ff5400;
@@ -238,9 +277,9 @@ main {
     border-radius: 8px;
     color: #f4f4f4;
     padding: 20px 15px 40px 15px;
-    text-align: center;
     font-size: 18px;
     font-weight: 500;
+    text-align: center;
     width: auto; }
   main input {
     width: 80%;
@@ -283,7 +322,122 @@ footer {
     font-size: 0.75rem;
     font-weight: 400; }
 
-@media screen and (max-width: 768px) and (min-width: 501px) {
+@media screen and (min-width: 1171px) {
+  main .game {
+    display: grid;
+    grid-template-columns: repeat(1fr, 5);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 20px 50px; }
+    main .game h1 {
+      grid-column: 1/6; }
+    main .game .game-logo {
+      grid-column: 1/3; }
+    main .game .game-overview {
+      grid-column: 3/6;
+      padding: 30px 20px; }
+  #contact {
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    grid-gap: 20px 50px; }
+    #contact .social-media {
+      grid-column: 1/3; }
+    #contact .newsletter {
+      grid-column: 1/2; }
+    #contact .email {
+      grid-column: 2/3; } }
+
+@media screen and (min-width: 769px) {
+  .menu-btn,
+  .menu-banner .banner-text {
+    display: none; }
+  main h1,
+  main h2,
+  main h3,
+  main h4,
+  main p,
+  main a {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1vh 100px; }
+  main h1 {
+    font-size: 4rem;
+    line-height: 1; }
+    main h1 .weak {
+      font-weight: 400; }
+  main h2 {
+    font-weight: 500;
+    font-size: 2rem; }
+    main h2.bold {
+      font-weight: 700; }
+  main h3,
+  main h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0 2vh; }
+  main p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: left; }
+    main p .biggie {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1; }
+  main a {
+    font-size: 2rem; }
+  main img {
+    height: 400px;
+    max-width: 720px;
+    padding: 50px 0 30px 0; }
+  main .contact h1,
+  main .contact h2,
+  main .contact h3,
+  main .contact h4,
+  main .contact p,
+  main .contact a {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1vh; }
+  main .icons i {
+    width: 124px;
+    height: 124px;
+    line-height: 120px;
+    margin: 50px 50px;
+    color: #f4f4f4;
+    border: 2px solid #f4f4f4; }
+  main .icons .fab {
+    font-size: 75px; } }
+
+@media screen and (max-width: 768px) and (min-width: 501px) and (min-height: 501px) {
+  .navbar {
+    display: none; }
+  main h1 {
+    font-size: 3rem;
+    line-height: 1.2; }
+  main h2 {
+    font-size: 1.8rem; }
+  main h3,
+  main h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0 2vh; }
+  main p,
+  main a {
+    font-size: 1.5rem; }
+  main .button {
+    padding: 30px 25px 50px 25px;
+    font-size: 24px;
+    font-weight: 500; }
+  main .icons i {
+    width: 96px;
+    height: 96px;
+    line-height: 92px;
+    margin: 30px 20px;
+    color: #f4f4f4;
+    border: 2px solid #f4f4f4; }
+  main .icons .fab {
+    font-size: 50px; }
   #home section {
     padding-left: 20%;
     padding-right: 20%; }
@@ -312,6 +466,10 @@ footer {
   .menu-branding .logo {
     height: 200px; } }
 
+@media screen and (max-width: 500px) {
+  .navbar {
+    display: none; } }
+
 @media screen and (max-width: 340px) {
   main section {
     padding: 5vh 1vh; }
@@ -323,3 +481,34 @@ footer {
   main a {
     padding-left: 3vh;
     padding-right: 3vh; } }
+
+@media screen and (max-height: 500px) {
+  .navbar {
+    display: none; }
+  .menu-btn,
+  .menu-banner .banner-text {
+    display: block; }
+  .menu-nav, .menu-branding {
+    width: 50%;
+    float: left; }
+  .menu-nav {
+    transform: translate3d(0, 100%, 0);
+    height: 100vh;
+    font-size: 24px; }
+  .menu-branding {
+    transform: translate3d(0, -100%, 0);
+    height: 100vh; }
+    .menu-branding .logo {
+      height: 100px; }
+  main h1,
+  main h2,
+  main h3,
+  main h4,
+  main p,
+  main a {
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1vh;
+    padding-left: 100px;
+    padding-right: 100px; } }
