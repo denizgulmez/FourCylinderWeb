@@ -1,15 +1,16 @@
 #contact {
   h1 {
-    padding-bottom: 50px;
+    padding-bottom: 2vh;
   }
 
   .email {
     .email-adress {
-      border: 2px solid $color-1;
-      border-radius: 10px;
+      padding-top: 20px;
 
       h2 {
         padding: 10px;
+        border: 2px solid $color-1;
+        border-radius: 10px;
       }
     }
   }

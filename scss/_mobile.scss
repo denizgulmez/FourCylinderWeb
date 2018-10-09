@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: repeat(1fr, 5);
     grid-auto-rows: minmax(100px, auto);
-    grid-gap: 20px 50px;
+    grid-gap: 20px 10px;
 
     h1 {
       grid-column: 1/6;
@@ -17,24 +17,6 @@
     .game-overview {
       grid-column: 3/6;
       padding: 30px 20px;
-    }
-  }
-
-  #contact {
-    display: grid;
-    grid-auto-columns: 1fr 1fr;
-    grid-gap: 20px 50px;
-
-    .social-media {
-      grid-column: 1/3;
-    }
-
-    .newsletter {
-      grid-column: 1/2;
-    }
-
-    .email {
-      grid-column: 2/3;
     }
   }
 }
@@ -54,9 +36,7 @@
     p,
     a {
       max-width: 1080px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 1vh 100px;
+      padding: 20px 100px;
     }
 
     h1 {
@@ -81,7 +61,8 @@
     h4 {
       font-size: 1.5rem;
       font-weight: 500;
-      padding: 0 2vh;
+      padding-top: 2vh;
+      padding-bottom: 2vh;
     }
 
     p {
@@ -106,20 +87,6 @@
       padding: 50px 0 30px 0;
     }
 
-    .contact {
-      h1,
-      h2,
-      h3,
-      h4,
-      p,
-      a {
-        max-width: 1080px;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 1vh;
-      }
-    }
-
     .icons {
       i {
         width: 124px;
@@ -133,6 +100,13 @@
       .fab {
         font-size: 75px;
       }
+    }
+  }
+
+  footer {
+    .txt-footer {
+      font-size: 1.25rem;
+      padding: 30px;
     }
   }
 }
