@@ -50,7 +50,7 @@
         <img src="/dist/img/4_cylinder_logo_mid.png" class="logo" alt="This was another logo">
       </div>
       <ul class="menu-nav">
-        <li class="nav-item current">
+        <li class="nav-item">
           <a href="index.html" class="nav-link">Home</a>
         </li>
         <li class="nav-item">
@@ -62,7 +62,7 @@
         <li class="nav-item">
           <a href="blog.html" class="nav-link">Blog</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item current">
           <a href="contact.html" class="nav-link">Contact</a>
         </li>
       </ul>
@@ -71,16 +71,17 @@
   </header>
 
   <main id="contact">
-    <section class="contact-img top-section">
+    <section class="contact-img">
+      <img src="/dist/img/contact-lg.png" alt="">
     </section>
     <section class="social-media bg-light">
       <div class="heading">
         <h1 class="top">JOIN THE COMMUNITY</h1>
       </div>
       <div class="icons">
-        <i class="fab fa-twitter fa-2x"></i>
-        <i class="fab fa-instagram fa-2x"></i>
-        <i class="fab fa-facebook-f fa-2x"></i>
+        <a href="https://twitter.com/CylinderFour" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="https://www.instagram.com/fourcylinderstudio/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="https://www.facebook.com/fourcylinderstudio" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
       </div>
     </section>
     <section class="newsletter bg-dark">
@@ -89,9 +90,11 @@
       </div>
       <div class="form">
         <form action="" class="subs-newsletter">
-          <input type="email" placeholder="your email here">
+          <fieldset>
+            <input type="email" placeholder="your email here" required>
+          </fieldset>
+          <button class="button subs" type="submit">SUBSCRIBE</button>
         </form>
-        <input class="button" type="button" value="SUBSCRIBE TO NEWSLETTER" onclick="window.location.href='index.html'" />
       </div>
     </section>
     <section class="email">

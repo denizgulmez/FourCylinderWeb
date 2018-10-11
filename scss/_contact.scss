@@ -8,9 +8,10 @@
       padding-top: 20px;
 
       h2 {
+        background-color: $color-2;
         padding: 10px;
-        border: 2px solid $color-1;
-        border-radius: 10px;
+
+        border-radius: 20px;
       }
     }
   }

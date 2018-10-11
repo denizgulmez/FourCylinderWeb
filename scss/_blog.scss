@@ -32,6 +32,11 @@
     text-decoration: none;
     color: $color-3;
     font-weight: 500;
+
+    &:hover {
+      color: $color-4;
+      @include easeOut;
+    }
   }
 
   .post-footer {

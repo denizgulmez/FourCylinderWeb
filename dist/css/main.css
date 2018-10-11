@@ -1,36 +1,16 @@
-/* @mixin background {
-  @if $show-home-image {
-    &#bg-img {
-      background: $home-image;
-      background-attachment: fixed;
-      background-size: cover;
-
-      &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        background: rgba($primary-color, $background-opacity);
-      }
-    }
-  }
-} */
 .menu-btn {
   position: absolute;
   z-index: 3;
   right: 20px;
   top: 18px;
   cursor: pointer;
-  transition: all 0.25s ease-out; }
+  transition: all 0.3s ease-out; }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
     background: #1a1a1a;
-    transition: all 0.25s ease-out; }
+    transition: all 0.3s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
@@ -81,10 +61,11 @@
     padding: 20px 30px;
     text-decoration: none;
     font-size: 24px;
-    font-weight: 500; }
+    font-weight: 500;
+    transition: all 0.3s ease-out; }
   .navbar li a:hover {
-    background-color: #993200;
-    border-radius: 0 0 10px 10px; }
+    background-color: #ff9e0f;
+    border-radius: 0 0 30px 30px; }
 
 .menu {
   position: fixed;
@@ -112,21 +93,21 @@
     transform: translate3d(100%, 0, 0);
     height: 60vh;
     font-size: 24px;
-    transition: all 0.25s ease-out; }
+    transition: all 0.3s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
     background: #f4f4f4;
     transform: translate3d(-100%, 0, 0);
     height: 40vh;
-    transition: all 0.25s ease-out; }
+    transition: all 0.3s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .logo {
       height: 100px; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
-    transition: all 0.25s ease-out; }
+    transition: all 0.3s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
@@ -139,7 +120,7 @@
     font-weight: 500;
     color: #f4f4f4;
     text-decoration: none;
-    transition: all 0.25s ease-out; }
+    transition: all 0.3s ease-out; }
     .menu .nav-link:hover {
       color: #1a1a1a; }
 
@@ -185,6 +166,9 @@
   text-decoration: none;
   color: #0ab1a9;
   font-weight: 500; }
+  #blog a:hover {
+    color: #02144c;
+    transition: all 0.3s ease-out; }
 
 #blog .post-footer {
   max-width: 720px;
@@ -198,9 +182,9 @@
 #contact .email .email-adress {
   padding-top: 20px; }
   #contact .email .email-adress h2 {
+    background-color: #ff9e0f;
     padding: 10px;
-    border: 2px solid #ff5400;
-    border-radius: 10px; }
+    border-radius: 20px; }
 
 * {
   box-sizing: border-box;
@@ -282,16 +266,52 @@ main {
     font-size: 18px;
     font-weight: 500;
     text-align: center;
-    width: auto; }
+    width: auto;
+    transition: all 0.3s ease-out; }
+    main .button.mnfst {
+      background-color: #cd0d1c; }
+      main .button.mnfst:hover {
+        background-color: #f4f4f4;
+        color: #cd0d1c;
+        border: solid 2px #cd0d1c;
+        padding: 25px 20px 45px 20px;
+        font-size: 22px;
+        font-weight: 600; }
+    main .button.subs {
+      background-color: #0ab1a9;
+      padding: 20px 35px 20px 35px; }
+      main .button.subs:hover {
+        background-color: #f4f4f4;
+        color: #0ab1a9;
+        border: solid 2px #0ab1a9;
+        padding: 25px 45px 25px 45px;
+        font-size: 22px;
+        font-weight: 600; }
+    main .button.elx {
+      background-color: #cd0d1c; }
+      main .button.elx:hover {
+        background-color: #f4f4f4;
+        color: #cd0d1c;
+        border: solid 2px #cd0d1c;
+        padding: 25px 20px 45px 20px;
+        font-size: 22px;
+        font-weight: 600; }
+  main fieldset {
+    border: none; }
   main input {
     width: 80%;
     max-width: 420px;
-    height: 20px;
+    height: 25px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 20px;
-    margin-top: 25px;
-    background-color: #f4f4f4; }
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #f4f4f4;
+    border: solid 2px #1a1a1a; }
+  main .icons a {
+    margin: 0;
+    padding: 0; }
   main .icons i {
     width: 64px;
     height: 64px;
@@ -301,13 +321,19 @@ main {
     vertical-align: middle;
     margin: 20px 10px;
     color: #f4f4f4;
-    border: 2px solid #f4f4f4; }
+    border: 2px solid #f4f4f4;
+    transition: all 0.3s ease-out; }
+    main .icons i:hover {
+      width: 160px;
+      height: 160px;
+      line-height: 160px;
+      font-size: 6rem; }
   main .icons .fa-twitter {
-    background-color: #0ab1a9; }
+    background-color: #0084ff; }
   main .icons .fa-instagram {
-    background-color: #cd0d1c; }
+    background-color: #cd486b; }
   main .icons .fa-facebook-f {
-    background-color: #02144c; }
+    background-color: #3b5998; }
   main .email {
     padding-top: 25px; }
   main .overview::after {
@@ -331,9 +357,14 @@ main {
       max-width: 720px;
       height: auto; }
   main .contact-img {
-    padding: 55px 0 0 0;
-    margin-left: 0;
-    margin-right: 0; }
+    padding: 0; }
+    main .contact-img img {
+      max-width: 1920px;
+      width: 100%;
+      height: auto;
+      padding-bottom: 0; }
+  main .social-media {
+    padding-top: 0; }
   main .blog-header {
     padding-top: 100px;
     padding-bottom: 0; }
@@ -363,7 +394,9 @@ footer {
       grid-column: 1/3; }
     main .game .game-overview {
       grid-column: 3/6;
-      padding: 30px 20px; } }
+      padding: 30px 20px; }
+  main .contact-img img {
+    margin-top: -200px; } }
 
 @media screen and (min-width: 963px) {
   .menu-btn,
@@ -440,6 +473,9 @@ footer {
     padding: 30px 25px 50px 25px;
     font-size: 24px;
     font-weight: 500; }
+  main .icons a {
+    margin: 0;
+    padding: 0; }
   main .icons i {
     width: 96px;
     height: 96px;
@@ -449,6 +485,11 @@ footer {
     border: 2px solid #f4f4f4; }
   main .icons .fab {
     font-size: 50px; }
+  main #contact a {
+    padding-left: 20%;
+    padding-right: 20%; }
+  main #contact .contact-img {
+    padding-top: 50px; }
   #home section {
     padding-left: 20%;
     padding-right: 20%; }
@@ -457,19 +498,16 @@ footer {
   #blog h3,
   #blog h4,
   #blog p,
-  #blog a,
   #manifesto h1,
   #manifesto h2,
   #manifesto h3,
   #manifesto h4,
   #manifesto p,
-  #manifesto a,
   #contact h1,
   #contact h2,
   #contact h3,
   #contact h4,
-  #contact p,
-  #contact a {
+  #contact p {
     padding-left: 20%;
     padding-right: 20%; }
   .menu-nav {

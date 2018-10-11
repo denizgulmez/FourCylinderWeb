@@ -30,3 +30,15 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+//Subscription Submit
+$("form").submit(function(e) {
+  e.preventDefault();
+  var error = "";
+  if ($(".email-subs").val() == "") {
+    error += "<p>Email adress is required</p>";
+  }
+  $(".error").html(error);
+} else {
+  $("form").unbind('submit').submit();
+});

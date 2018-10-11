@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
 	 crossorigin="anonymous">
 	<link rel="stylesheet" href="css/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<title>Four Cylinder Studio</title>
 </head>
 
@@ -80,7 +81,7 @@
 			<h2 class="sm-heading">We are an independent game studio that explores new mechanics and visual styles.</h2>
 			<h2 class="bold">The goal is the unconventional!</h2>
 
-			<input class="button" type="button" value="READ THE MANIFESTO" onclick="window.location.href='manifesto.html'" />
+			<input class="button mnfst" type="button" value="READ THE MANIFESTO" onclick="window.location.href='manifesto.html'" />
 
 			<!-- <button type="button" class="btn-manifest">Read The Manifesto</button> -->
 		</section>
@@ -94,20 +95,23 @@
 				<h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam repellat adipisci ea magnam
 					temporibus ratione deleniti et dolores laudantium magni tempora id tempore fugiat nostrum eligendi, quos incidunt
 					blanditiis quibusdam voluptatibus aut dignissimos. Facere consequuntur, modi sed nobis aut dolorum.</h2>
+				<h1><span class="weak">SUBSCRIBE THE NEWSLETTER</span></h1>
+				<div class="error"></div>
 				<form action="" class="subs-newsletter">
-					<input type="email" placeholder="your email here">
+					<fieldset>
+						<input class="email-subs" type="email" name="email-subs" placeholder="your email here" required>
+					</fieldset>
+					<button class="button subs" type="submit">SUBSCRIBE</button>
 				</form>
-				<input class="button" type="button" value="SUBSCRIBE TO NEWSLETTER" onclick="window.location.href='index.html'" />
-
 			</div>
 		</section>
 
 		<section class="contact bg-light">
 			<h1>JOIN THE COMMUNITY</h1>
 			<div class="icons">
-				<i class="fab fa-twitter fa-2x"></i>
-				<i class="fab fa-instagram fa-2x"></i>
-				<i class="fab fa-facebook-f fa-2x"></i>
+				<a href="https://twitter.com/CylinderFour" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+				<a href="https://www.instagram.com/fourcylinderstudio/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+				<a href="https://www.facebook.com/fourcylinderstudio" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
 			</div>
 
 			<div class="email">

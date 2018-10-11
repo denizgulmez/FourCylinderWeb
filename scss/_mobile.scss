@@ -19,6 +19,12 @@
       padding: 30px 20px;
     }
   }
+
+  main &.contact-img {
+    img {
+      margin-top: -200px;
+    }
+  }
 }
 
 // Desktops & Laptops
@@ -101,6 +107,11 @@
         font-size: 75px;
       }
     }
+
+    .contact-img {
+      img {
+      }
+    }
   }
 
   footer {
@@ -146,6 +157,11 @@
     }
 
     .icons {
+      a {
+        margin: 0;
+        padding: 0;
+      }
+
       i {
         width: 96px;
         height: 96px;
@@ -157,6 +173,17 @@
 
       .fab {
         font-size: 50px;
+      }
+    }
+
+    #contact {
+      a {
+        padding-left: 20%;
+        padding-right: 20%;
+      }
+
+      .contact-img {
+        padding-top: 50px;
       }
     }
   }
@@ -175,8 +202,7 @@
     h2,
     h3,
     h4,
-    p,
-    a {
+    p {
       padding-left: 20%;
       padding-right: 20%;
     }
