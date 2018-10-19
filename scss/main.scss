@@ -146,6 +146,18 @@ main {
         font-weight: 600;
       }
     }
+
+    &.back {
+      background-color: $color-1;
+      &:hover {
+        background-color: $primary-color;
+        color: $color-1;
+        border: solid 2px $color-1;
+        padding: 25px 20px 45px 20px;
+        font-size: 22px;
+        font-weight: 600;
+      }
+    }
   }
 
   fieldset {
@@ -194,7 +206,7 @@ main {
     }
   }
 
-  .email {
+  .contact-mail {
     padding-top: 25px;
   }
 
